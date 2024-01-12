@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build",
+    "deploy": "ls -al build && gh-pages -d build",
     "test": "jest"
   },
   "dependencies": {

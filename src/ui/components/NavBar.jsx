@@ -16,7 +16,7 @@ export const NavBar = () => {
                 className="navbar-brand" 
                 to="/"
             >
-                Asociaciones
+                Inicio
             </Link>
 
             <div className="navbar-collapse">
@@ -24,23 +24,23 @@ export const NavBar = () => {
 
                     <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
-                        to="/marvel"
+                        to="/home"
                     >
-                        Marvel
+                        Home
                     </NavLink>
 
                     <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
-                        to="/dc"
+                        to="/history"
                     >
-                        DC
+                        Historico
                     </NavLink>
 
                     <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
-                        to="/search"
+                        to="/alert"
                     >
-                        Search
+                        Configurar Alerta
                     </NavLink>
                 </div>
             </div>
@@ -48,7 +48,7 @@ export const NavBar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <span className='nav-item nav-link text-primary'>
-                        Diego
+                        User
                     </span>
 
                     <button 

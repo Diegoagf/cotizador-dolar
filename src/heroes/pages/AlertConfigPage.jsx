@@ -5,7 +5,7 @@ import { useForm } from "../../hooks/useForm"
 import { HeroeCard } from "../components"
 import { GetHeroesByName } from "../helpers";
 
-export const SearchPage = () => {
+export const AlertConfigPage = () => {
   
   const navigate= useNavigate();
   const location = useLocation();

@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://diegoagf.github.io",
+  "homepage": "https://diegoagf.github.io/cotizador-dolar",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/cotizador-dolar/",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "query-string": "^7.1.1",

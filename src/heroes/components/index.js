@@ -1,2 +1,2 @@
-export * from './HeroesList';
+export * from './CotizacionesList';
 export * from './HeroeCard';

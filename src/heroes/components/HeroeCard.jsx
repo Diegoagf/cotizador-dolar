@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cotizacion from "./Cotizacion";
 
 const CharactersByHero = ({alter_ego,characters})=>{
     // if(alter_ego===characters) return(<></>);
@@ -34,6 +35,7 @@ export const HeroeCard = ({
                         {/* {
                             (alter_ego!==characters) && (<p>{characters}</p>)
                         } */}
+                        <Cotizacion/>
                         <CharactersByHero alter_ego={alter_ego} characters={characters}/>
 
                         <p className="card-text">

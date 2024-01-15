@@ -1,36 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-function Cotizacion() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://dolarapi.com/v1/dolares');
-
-        if (!response.ok) {
-          throw new Error('Error al obtener los datos');
-        }
-
-        const result = await response.json();
-
-        setData(result);
-      } catch (error) {
-        console.error('Error al obtener datos:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+function Cotizacion({ data }) {
   return (
-    <div>
-      {data ? (
-        <p>Los datos de la API son: {JSON.stringify(data)}</p>
-      ) : (
-        <p>Cargando datos...</p>
-      )}
+    // <div>
+    //   <h2>{data.nombre}</h2>
+    //   <p>Compra: {data.compra}</p>
+    //   <p>Venta: {data.venta}</p>
+    //   <p>Fecha de Actualización: {data.fechaActualizacion}</p>
+    // </div>
+    <div className="col animate__animated animate__fadeIn">
+    <div className="card">
+        <div className="row no-gutters">
+            <div className="col-4">
+                {/* <img src={HeroImagePath} alt={superhero} className="card-img"/> */}
+            </div>
+            <div className="col-8">
+                <div className="card-body">
+                    <h5 className="card-title">{data.nombre}</h5>
+                    <p className="card-text">Compra: {data.compra}</p>
+                    <p className="card-text">Venta: {data.venta}</p>    
+                    <p className="card-text">Fecha de Actualización: {data.fechaActualizacion}</p>            
+                </div>
+            </div>
+        </div>
     </div>
+</div>
   );
 }
 

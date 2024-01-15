@@ -22,19 +22,19 @@ export const NavBar = () => {
             <div className="navbar-collapse">
                 <div className="navbar-nav">
 
-                    <NavLink 
+                    {/* <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
                         to="/home"
                     >
                         Home
-                    </NavLink>
+                    </NavLink> */}
 
-                    <NavLink 
+                    {/* <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}
                         to="/history"
                     >
                         Historico
-                    </NavLink>
+                    </NavLink> */}
 
                     <NavLink 
                         className={({isActive})=>`nav-item nav-link ${isActive ? 'active':''}`}

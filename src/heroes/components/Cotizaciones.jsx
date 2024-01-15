@@ -25,16 +25,18 @@ function Cotizaciones() {
   }, []);
 
   return (
-    <div>
-      {cotizacionData ? (
-        // Renderiza todos los datos de cotizaciones
-        cotizacionData.map((cotizacion, index) => (
-          <Cotizacion key={index} data={cotizacion} />
-        ))
-      ) : (
-        <p>Cargando datos...</p>
-      )}
-    </div>
+<div className="row">
+  {cotizacionData ? (
+    // Renderiza todos los datos de cotizaciones
+    cotizacionData.map((cotizacion, index) => (
+      <div key={index} className="card bg-light">
+        <Cotizacion data={cotizacion} />
+      </div>
+    ))
+  ) : (
+    <p>Cargando datos...</p>
+  )}
+</div>
   );
 }
 

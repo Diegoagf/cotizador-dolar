@@ -23,21 +23,23 @@ function Cotizaciones() {
 
     fetchData();
   }, []);
-
-  return (
-<div className="row">
-  {cotizacionData ? (
-    // Renderiza todos los datos de cotizaciones
-    cotizacionData.map((cotizacion, index) => (
-      <div key={index} className="card bg-light">
-        <Cotizacion data={cotizacion} />
-      </div>
-    ))
-  ) : (
-    <p>Cargando datos...</p>
-  )}
-</div>
-  );
+return (
+  <div className="col animate__animated animate__fadeIn">
+    {cotizacionData ? (
+      // Renderiza todos los datos de cotizaciones
+      <>
+        <h2 className="modal-title">Fecha de Actualización: {cotizacionData[0].fechaActualizacion}</h2>
+        {cotizacionData.map((cotizacion, index) => (
+          <div key={index}>
+            <Cotizacion data={cotizacion} />
+          </div>
+        ))}
+      </>
+    ) : (
+      <p>Cargando datos...</p>
+    )}
+  </div>
+);
 }
 
 export default Cotizaciones;
